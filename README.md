@@ -1,6 +1,31 @@
 # LunarCore-Docker
 Containerized variant to run [LunarCore](https://github.com/Melledy/LunarCore)
 
+
+## Setup
+
+Clone the project
+```bash
+  git clone https://github.com/xJylin/lunarcore-docker
+```
+
+Go to the project directory
+```bash
+  cd lunarcore-docker
+```
+
+Build the container
+```bash
+  docker build . -t lunarcore-docker
+```
+
+Run the container
+```bash
+  docker run -it -v /your/path:/app lunarcore-docker
+```
+
+
+
 ## Environment Variables
 The following variables can be passed to the container using the parameter `-e` <br>
 If they are set their respective values will be overwritten in the config.json file. This happens at every container start. <br>
