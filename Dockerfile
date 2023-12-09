@@ -25,10 +25,10 @@ ENV MONGO_DB_USE_INTERNAL=true
 ENV COMPILE_LUNACORE=false
 
 #SCRIPTS
-COPY initial-setup.sh /root/initial-setup.sh
-COPY update-config.sh /root/update-config.sh
-COPY start-lunarcore.sh /root/start-lunarcore.sh
-COPY entrypoint.sh /root/entrypoint.sh
+COPY ./scripts/initial-setup.sh /root/initial-setup.sh
+COPY ./scripts/update-config.sh /root/update-config.sh
+COPY ./scripts/start-lunarcore.sh /root/start-lunarcore.sh
+COPY ./scripts/entrypoint.sh /root/entrypoint.sh
 
 #VOLUMES
 VOLUME /app
