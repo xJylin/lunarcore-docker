@@ -1,6 +1,16 @@
 # LunarCore-Docker
-Containerized variant to run [LunarCore](https://github.com/Melledy/LunarCore)
+Basic [LunarCore](https://github.com/Melledy/LunarCore) docker container.
 
+
+## Features
+
+- Automatic download & setup
+- Most important configuration setting accessible via environment variables
+- Compile from [source](https://github.com/Melledy/LunarCore) or use precompiled [.jar](https://github.com/Melledy/LunarCore/tags)
+- Configurable PID/GID (Hello Unraid)
+
+## Upcoming
+ - Automatic update feature
 
 ## Setup
 
