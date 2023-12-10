@@ -13,7 +13,6 @@ ENV URL_GIT_LUNARCORECONFIGS="https://gitlab.com/Melledy/LunarCore-Configs"
 ENV URL_GIT_STARRAILDATA="https://github.com/Dimbreath/StarRailData"
 ENV INSTALL_PATH="/app"
 
-
 #ENV MONGO_DB_URI
 #ENV MONGO_DB_USE_INTERNAL
 #ENV KEYSTORE_PATH
