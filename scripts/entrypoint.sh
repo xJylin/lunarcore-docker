@@ -3,7 +3,7 @@
 #
 
 if ! id "lunarcore" >/dev/null 2>&1; then
-   if [ ! $(getent group 1000) ]; then
+   if [ ! $(getent group $PGID) ]; then
       groupadd -g $PGID lunarcore
    fi
    useradd -u $PUID -g $PGID -ms /bin/bash lunarcore
