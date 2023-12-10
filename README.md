@@ -52,7 +52,7 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `PUBLIC_ADDRESS`  | Public address or hostname | `string` | 127.0.0.1 | undefined
 | `PUBLIC_PORT_DISPATCHER`  | Port for the Dispatcher | `integer` | 443 | undefined
 | `PUBLIC_PORT_GAMESERVER`  | Port for the Gameserver | `integer` | 23301 | undefined
-| `MONGO_DB_URI`  | Determine which mongoDB server to connect to | `string` | mongodb://localhost:27017 | undefined
+| `MONGO_DB_URI`  | URI to the mongoDB server | `string` | mongodb://localhost:27017 | undefined
 | `MONGO_DB_USE_INTERNAL`  | true = use internal db <br false = use external db | `boolean` | true | undefined
 | `COMPILE_LUNARCORE`  | true = download and compile latest version from source <br> false = download latest precompiled binary | `boolean` | true | undefined
 | `GAMESERVER_NAME`  | Name of the Server | `string` | My Server | undefined
