@@ -48,7 +48,7 @@ if ! is_repo_up_to_date "$INSTALL_PATH/LunarCore"; then
         recompile_lunarcore_binary
     fi
 else
-    echo -e "\033[0;35mLunarCore repository is up to date.\033[0m"
+    echo -e "\033[0;32mLunarCore repository is up to date.\033[0m"
 fi
 
 #Update StarRailData
@@ -58,7 +58,7 @@ if ! is_repo_up_to_date "$INSTALL_PATH/StarRailData"; then
     echo -e "\033[0;35mCopying StarRailData to LunarCore/resources...\033[0m"
     cp -fR $INSTALL_PATH/StarRailData/* $INSTALL_PATH/LunarCore/resources
 else
-    echo -e "\033[0;35mStarRailData repository is up to date.\033[0m"
+    echo -e "\033[0;32mStarRailData repository is up to date.\033[0m"
 fi
 
 #Update StarRailConfigs
@@ -68,7 +68,7 @@ if ! is_repo_up_to_date "$INSTALL_PATH/LunarCoreConfigs"; then
     echo -e "\033[0;35mCopying LunarCoreConfigs to LunarCore/resources...\033[0m"
     cp -fR $INSTALL_PATH/LunarCoreConfigs/* $INSTALL_PATH/LunarCore/resources
 else
-    echo -e "\033[0;35mLunarCoreConfigs repository is up to date.\033[0m"
+    echo -e "\033[0;32mLunarCoreConfigs repository is up to date.\033[0m"
 fi
 
 
@@ -78,6 +78,6 @@ if [ "$COMPILE_LUNARCORE" = false ]; then
        echo -e "\033[0;35mBinary is not up to date - Updating binary...\033[0m"
        update_lunarcore_binary
     else
-       echo -e "\033[0;35mBinary is up to date.\033[0m"
+       echo -e "\033[0;32mBinary is up to date.\033[0m"
     fi
 fi
