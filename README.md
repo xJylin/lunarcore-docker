@@ -71,6 +71,9 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `PGID`  | Group ID for the internal container user group | `integer` | 1000 | 1000 
 
 
+## Notice
+The container at the moment requires the `-it` to keep LunarCore active.
+Otherwise the container will end after LunarCore finished starting up.
 
 ## Related Projects
 
