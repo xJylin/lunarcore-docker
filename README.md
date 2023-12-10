@@ -8,9 +8,7 @@ Basic [LunarCore](https://github.com/Melledy/LunarCore) docker container.
 - Most important configuration setting accessible via environment variables
 - Compile from [source](https://github.com/Melledy/LunarCore) or use precompiled [.jar](https://github.com/Melledy/LunarCore/tags)
 - Configurable PID/GID (Hello Unraid)
-
-## Upcoming
- - Automatic update feature
+- Automatic update feature
 
 ## Setup
 
@@ -66,3 +64,13 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `LANGUAGE`  | Sets server language | `string` | EN | undefined
 | `PUID`  | User ID for the internal container user | `integer` | 1000 | 1000 
 | `PGID`  | Group ID for the internal container user group | `integer` | 1000 | 1000 
+
+
+
+## Related Projects
+
+ - [LunarCore](https://github.com/Melledy/LunarCore)
+ - [StarRailData](https://github.com/Dimbreath/StarRailData)
+ - [LunarCore-Configs]( https://gitlab.com/Melledy/LunarCore-Configs)
+
+
