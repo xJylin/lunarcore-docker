@@ -7,7 +7,9 @@ source $INSTALL_PATH/set-env.sh
 
 cd /home/lunarcore
 if [ "$INITIALIZED" = true ]; then
-   source update-lunarcore.sh
+   if [ "$UPDATE_LUNARCORE" = true ]; then
+      source update-lunarcore.sh
+   fi
    source update-config.sh
 else
    source initial-setup.sh
