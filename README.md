@@ -29,7 +29,7 @@ Build the container
 
 Run the container - **replace [] with your values**
 ```bash
-  docker run -it -v '[HOST_PATH]:/app' -p '[HOST_PORT]:443/tcp' -p '[HOST_PORT]:23301/udp' lunarcore-docker
+  docker run -it -v '[HOST_PATH]:/app' -p '[HOST_PORT]:[PUBLIC_PORT_DISPATCHER]/tcp' -p '[HOST_PORT]:[PUBLIC_PORT_GAMESERVER]/udp' lunarcore-docker
 ```
 
 Example:
