@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y openjdk-17-jdk openjdk-17-jre jq screen
 ENV PUID=1000
 ENV PGID=1000
 ENV COMPILE_LUNARCORE=false
-UPDATE_LUNARCORE=true
+ENV UPDATE_LUNARCORE=true
 ENV URL_GIT_LUNARCORE="https://github.com/Melledy/LunarCore"
 ENV URL_GIT_LUNARCORECONFIGS="https://gitlab.com/Melledy/LunarCore-Configs"
 ENV URL_GIT_STARRAILDATA="https://github.com/Dimbreath/StarRailData"
