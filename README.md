@@ -63,7 +63,7 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `GAMESERVER_DESC`  | Description of the server | `string` | My Description | undefined
 | `AUTO_CREATE_ACCOUNT`  | Automatically create new accounts on login | `boolean` | true | undefined
 | `SPEND_STAMINA`  | Enables/Disables stamina consumption | `boolean` | true | undefined
-| `UNLOCK_ALL_CHALLENGES`  | Unlocks all challanges | `boolean` | true | undefined
+| `UNLOCK_ALL_CHALLENGES`  | Unlocks all challenges | `boolean` | true | undefined
 | `STAMINA_RECOVERY_RATE`  | Rate at which stamina is recovered | `integer` | true | undefined
 | `STAMINA_RESERVE_RECOVERY_RATE`  | Rate at which stamina reserve is recovered | `integer` | true | undefined
 | `LANGUAGE`  | Sets server language | `string` | EN | undefined
