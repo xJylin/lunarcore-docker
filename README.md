@@ -57,8 +57,8 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `PUBLIC_PORT_GAMESERVER`  | Port for the Gameserver | `integer` | 23301 | undefined
 | `MONGO_DB_URI`  | URI to the mongoDB server | `string` | mongodb://localhost:27017 | undefined
 | `MONGO_DB_USE_INTERNAL`  | true = use internal db <br false = use external db | `boolean` | true | undefined
-| `COMPILE_LUNARCORE`  | true = download and compile latest version from source <br> false = download latest precompiled binary | `boolean` | true | undefined
-| `UPDATE_LUNARCORE`  | true = automatically updates LunarCore (takes `COMPILE_LUNARCORE` into account) <br> false = disables automatic updates | `boolean` | true | true
+| `COMPILE_LUNARCORE`  | true = download and compile latest version from source <br> false = download latest precompiled binary | `boolean` | true | `false`
+| `UPDATE_LUNARCORE`  | true = automatically updates LunarCore (takes `COMPILE_LUNARCORE` into account) <br> false = disables automatic updates | `boolean` | true | `true`
 | `GAMESERVER_NAME`  | Name of the Server | `string` | My Server | undefined
 | `GAMESERVER_DESC`  | Description of the server | `string` | My Description | undefined
 | `AUTO_CREATE_ACCOUNT`  | Automatically create new accounts on login | `boolean` | true | undefined
@@ -67,8 +67,8 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `STAMINA_RECOVERY_RATE`  | Rate at which stamina is recovered | `integer` | true | undefined
 | `STAMINA_RESERVE_RECOVERY_RATE`  | Rate at which stamina reserve is recovered | `integer` | true | undefined
 | `LANGUAGE`  | Sets server language | `string` | EN | undefined
-| `PUID`  | User ID for the internal container user | `integer` | 1000 | 1000 
-| `PGID`  | Group ID for the internal container user group | `integer` | 1000 | 1000 
+| `PUID`  | User ID for the internal container user | `integer` | 1000 | `1000`
+| `PGID`  | Group ID for the internal container user group | `integer` | 1000 | `1000`
 
 
 ## Notice
