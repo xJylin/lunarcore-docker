@@ -1,18 +1,11 @@
 #!/bin/bash
 #See https://github.com/Melledy/LunarCore
-
 echo -e "\033[0;35mStarting initial setup\033[0m"
-
-URL_BINARY_LUNARCORE="https://github.com/Melledy/LunarCore/releases/download/v1.0.1/LunarCore.jar"
-URL_GIT_LUNARCORE="https://github.com/Melledy/LunarCore"
-URL_GIT_LUNARCORECONFIGS="https://gitlab.com/Melledy/LunarCore-Configs"
-URL_GIT_STARRAILDATA="https://github.com/Dimbreath/StarRailData"
 
 echo -e "\033[0;35mDownloading resources...\033[0m"
 git clone $URL_GIT_LUNARCORE "$INSTALL_PATH/LunarCore"
 git clone $URL_GIT_LUNARCORECONFIGS "$INSTALL_PATH/LunarCoreConfigs"
 git clone $URL_GIT_STARRAILDATA "$INSTALL_PATH/StarRailData"
-
 
 if [ "$COMPILE_LUNARCORE" = true ]; then
    echo -e "\033[0;35mCompiling LunarCore...\033[0m"
@@ -20,8 +13,11 @@ if [ "$COMPILE_LUNARCORE" = true ]; then
    chmod +x ./gradlew
    ./gradlew jar
 else
-   echo -e "\033[0;35mDownloading LunarCore Binary...\033[0m"
-   wget $URL_BINARY_LUNARCORE -P $INSTALL_PATH/LunarCore
+   echo -e "\033[0;35mDownloading latest LunarCore binary...\033[0m"
+   cd $INSTALL_PATH/LunarCore
+   LUNARCORE_RELEASE=$(git describe --tags $(git rev-list --tags --max-count=1))
+   echo "export LUNARCORE_RELEASE=$LUNARCORE_RELEASE" >> $INSTALL_PATH/set-env.sh
+   wget "$URL_GIT_LUNARCORE/releases/download/$LUNARCORE_RELEASE/LunarCore.jar" -P $INSTALL_PATH/LunarCore -O LunarCore.jar
 fi
 
 echo -e "\033[0;35mCreating LunarCore/resources directory...\033[0m"

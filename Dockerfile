@@ -6,7 +6,12 @@ RUN apt-get update && apt-get install -y openjdk-17-jdk openjdk-17-jre jq screen
 #ENV
 ENV PUID=1000
 ENV PGID=1000
-ENV COMPILE_LUNACORE=false
+ENV COMPILE_LUNARCORE=false
+ENV URL_GIT_LUNARCORE="https://github.com/Melledy/LunarCore"
+ENV URL_GIT_LUNARCORECONFIGS="https://gitlab.com/Melledy/LunarCore-Configs"
+ENV URL_GIT_STARRAILDATA="https://github.com/Dimbreath/StarRailData"
+ENV INSTALL_PATH="/app"
+
 
 #ENV MONGO_DB_URI
 #ENV MONGO_DB_USE_INTERNAL
@@ -29,6 +34,7 @@ ENV COMPILE_LUNACORE=false
 COPY ./scripts/initial-setup.sh /root/initial-setup.sh
 COPY ./scripts/update-config.sh /root/update-config.sh
 COPY ./scripts/start-lunarcore.sh /root/start-lunarcore.sh
+COPY ./scripts/update-lunarcore.sh /root/update-lunarcore.sh
 COPY ./scripts/entrypoint.sh /root/entrypoint.sh
 
 #VOLUMES

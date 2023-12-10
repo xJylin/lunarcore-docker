@@ -1,14 +1,16 @@
 #!/bin/bash
-INSTALL_PATH="/app"
+HOME=~lunarcore
+source $INSTALL_PATH/set-env.sh
 
 cd /home/lunarcore
-if [ -f "$INSTALL_PATH/.initialized" ]; then
+if [ "$INITIALIZED" = true ]; then
    source update-config.sh
 else
    source initial-setup.sh
    cd /home/lunarcore
    source update-config.sh
-   touch $INSTALL_PATH/.initialized
+   echo "export INITIALIZED=true" >> $INSTALL_PATH/set-env.sh
+
 fi
 echo -e "\033[0;32mLaunching LunarCore...\033[0m"
 cd $INSTALL_PATH/LunarCore
