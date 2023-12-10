@@ -1,4 +1,7 @@
 #!/bin/bash
+# Container entrypoint script
+#
+
 if ! id "lunarcore" >/dev/null 2>&1; then
    if [ ! $(getent group 1000) ]; then
       groupadd -g $PGID lunarcore

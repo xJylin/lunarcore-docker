@@ -1,4 +1,7 @@
 #!/bin/bash
+# Updates config.json with ENV variable values if they are set.
+#
+
 echo -e "\033[0;35mUpdating config.json...\033[0m"
 cd $INSTALL_PATH/LunarCore
 

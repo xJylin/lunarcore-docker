@@ -1,9 +1,13 @@
 #!/bin/bash
+# Installs LunarCore if the script runs for the first time - otherwise updates and starts LunarCore
+#
+
 HOME=~lunarcore
 source $INSTALL_PATH/set-env.sh
 
 cd /home/lunarcore
 if [ "$INITIALIZED" = true ]; then
+   source update-lunarcore.sh
    source update-config.sh
 else
    source initial-setup.sh

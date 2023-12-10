@@ -1,5 +1,7 @@
 #!/bin/bash
-#See https://github.com/Melledy/LunarCore
+# Initial download and setup of LunarCore.
+#
+
 echo -e "\033[0;35mStarting initial setup\033[0m"
 
 echo -e "\033[0;35mDownloading resources...\033[0m"
@@ -23,21 +25,18 @@ fi
 echo -e "\033[0;35mCreating LunarCore/resources directory...\033[0m"
 mkdir -p $INSTALL_PATH/LunarCore/resources
 
-
 echo -e "\033[0;35mCopying StarRailData to LunarCore/resources...\033[0m"
-rm -fr $INSTALL_PATH/StarRailData/README.md
-rm -fr $INSTALL_PATH/StarRailData/.git
 cp -fR $INSTALL_PATH/StarRailData/* $INSTALL_PATH/LunarCore/resources
-rm -fr $INSTALL_PATH/StarRailData
 
 echo -e "\033[0;35mCopying LunarCoreConfigs to LunarCore/resources...\033[0m"
-rm -fr $INSTALL_PATH/LunarCoreConfigs/.git
 cp -fR $INSTALL_PATH/LunarCoreConfigs/* $INSTALL_PATH/LunarCore/resources
-rm -fr $INSTALL_PATH/LunarCoreConfigs
+
+echo -e "\033[0;35mCleaning up LunarCore/resources...\033[0m"
+rm -fr $INSTALL_PATH/LunarCore/resources/README.md
 
 echo -e "\033[0;35mLaunching LunarCore to generate config.json...\033[0m"
 cd $INSTALL_PATH/LunarCore
 screen -d -m java -jar LunarCore.jar
 sleep 1
 PID=$(ps -ef | pgrep -fx "java -jar LunarCore.jar")
-sudo kill -9 $PID
+sudo kill -15 $PID
