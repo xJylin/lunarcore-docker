@@ -29,12 +29,12 @@ Build the container
 
 Run the container - **replace [] with your values**
 ```bash
-  docker run -it -v [HOST_PATH]:/app lunarcore-docker -p [HOST_PORT]:443/tcp -p '[HOST_PORT]:23301/udp'
+  docker run -it -v '[HOST_PATH]:/app' lunarcore-docker -p '[HOST_PORT]:443/tcp' -p '[HOST_PORT]:23301/udp'
 ```
 
 Example:
 ```bash
-  docker run -it -v ./app:/app lunarcore-docker -e USE_SSL=false -p 443:443/tcp -p '23301:23301/udp'
+  docker run -it -v './app:/app' lunarcore-docker -e USE_SSL=false -p '443:443/tcp' -p '23301:23301/udp'
 ```
 
 
