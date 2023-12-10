@@ -55,7 +55,7 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `MONGO_DB_URI`  | URI to the mongoDB server | `string` | mongodb://localhost:27017 | undefined
 | `MONGO_DB_USE_INTERNAL`  | true = use internal db <br false = use external db | `boolean` | true | undefined
 | `COMPILE_LUNARCORE`  | true = download and compile latest version from source <br> false = download latest precompiled binary | `boolean` | true | undefined
-| `UPDATE_LUNARCORE`  | true = automatically updates LunarCore (takes `COMPILE_LUNARCORE` into account) <br> false = disables automatic updates | `boolean` | true | undefined
+| `UPDATE_LUNARCORE`  | true = automatically updates LunarCore (takes `COMPILE_LUNARCORE` into account) <br> false = disables automatic updates | `boolean` | true | true
 | `GAMESERVER_NAME`  | Name of the Server | `string` | My Server | undefined
 | `GAMESERVER_DESC`  | Description of the server | `string` | My Description | undefined
 | `AUTO_CREATE_ACCOUNT`  | Automatically create new accounts on login | `boolean` | true | undefined
