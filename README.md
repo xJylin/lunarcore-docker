@@ -34,7 +34,7 @@ Run the container - **replace [] with your values**
 
 Example:
 ```bash
-  docker run -it -v './app:/app' lunarcore-docker -e USE_SSL=false -p '443:443/tcp' -p '23301:23301/udp'
+  docker run -it -v './app:/app' lunarcore-docker -e 'USE_SSL'='false' -p '443:443/tcp' -p '23301:23301/udp'
 ```
 
 
