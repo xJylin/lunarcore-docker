@@ -30,6 +30,8 @@ if [ -n "$PUBLIC_PORT_GAMESERVER" ]; then lunarCoreConfig=$(echo $lunarCoreConfi
 if [ -n "$AUTO_CREATE_ACCOUNT" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.autoCreateAccount = $AUTO_CREATE_ACCOUNT"); fi
 if [ -n "$SPEND_STAMINA" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.spendStamina = $SPEND_STAMINA"); fi
 if [ -n "$UNLOCK_ALL_CHALLENGES" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.unlockAllChallenges = $UNLOCK_ALL_CHALLENGES"); fi
+if [ -n "$START_TRAILBLAZER_LEVEL" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.startTrailblazerLevel = $START_TRAILBLAZER_LEVEL"); fi
+if [ -n "$AUTO_UPGRADE_WORLD_LEVEL" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.autoUpgradeWorldLevel = $AUTO_UPGRADE_WORLD_LEVEL"); fi
 if [ -n "$STAMINA_RECOVERY_RATE" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.staminaRecoveryRate = $STAMINA_RECOVERY_RATE"); fi
 if [ -n "$STAMINA_RESERVE_RECOVERY_RATE" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.staminaReserveRecoveryRate = $STAMINA_RESERVE_RECOVERY_RATE"); fi
 if [ -n "$LANGUAGE" ]; then lunarCoreConfig=$(echo $lunarCoreConfig | jq ".serverOptions.language = \"$LANGUAGE\""); fi
