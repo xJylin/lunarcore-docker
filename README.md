@@ -66,6 +66,7 @@ Example: `-e GAMESERVER_NAME="My Server"`
 | `UNLOCK_ALL_CHALLENGES`  | Unlocks all challenges | `boolean` | true | undefined
 | `START_TRAILBLAZER_LEVEL`  | Sets the starter Trailblazer level (1-70) | `integer` | 69 | undefined
 | `AUTO_UPGRADE_WORLD_LEVEL`  | Upgrades the world level to the maximum | `boolean` | true | undefined
+| `MAX_CUSTOM_RELIC_LEVEL`  | Sets maximum level for custom relics | `integer` | 15 | undefined
 | `STAMINA_RECOVERY_RATE`  | Rate at which stamina is recovered | `integer` | true | undefined
 | `STAMINA_RESERVE_RECOVERY_RATE`  | Rate at which stamina reserve is recovered | `integer` | true | undefined
 | `LANGUAGE`  | Sets server language | `string` | EN | undefined
